@@ -125,6 +125,9 @@ body {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 30px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* button */
 .button {
@@ -140,6 +143,7 @@ body {
   font-size: 16px;
   line-height: 1.88;
   border-radius: 4px;
+  border: none;
 
   letter-spacing: 0.06em;
   padding: 10px 32px;
@@ -150,33 +154,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
-.button.secondary {
-  background: #f5f4fa;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  letter-spacing: 0.03em;
-  border: 0;
 
-  margin-bottom: 50px;
-  padding: 6px 22px;
-}
-.btn:not(:last-child) {
-  margin-right: 8px;
-}
-.sec-btn {
-  display: flex;
-  justify-content: center;
-}
-.button.secondary:hover,
-.button.secondary:focus {
-  color: var(--primary-whyte-color);
-  background-color: var(--accent-color);
-  padding: 6px 25px;
-}
 /* features */
 
 .feature-list {
@@ -205,6 +183,7 @@ body {
   width: 270px;
 }
 /* section */
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -223,10 +202,18 @@ body {
   margin-top: 0;
   margin-bottom: 50px;
 }
-.card-border.first {
+.cards-first {
   border: 0;
 }
-
+.cards.first:not(:last-child) {
+  margin-right: 30px;
+}
+.img {
+  display: block;
+}
+.list.img {
+  display: flex;
+}
 /* Examples */
 .work-list .title-name {
   color: var(--primary-text-color);
@@ -235,6 +222,9 @@ body {
   padding-top: 0;
 }
 /* Our team */
+.title-card {
+  padding: 30px;
+}
 .title-name {
   color: var(--primary-text-color);
 
@@ -244,7 +234,6 @@ body {
   text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
-  padding-top: 30px;
 }
 .position {
   font-size: 16px;
@@ -252,30 +241,28 @@ body {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 30px;
 }
 .team-card {
   background-color: var(--primary-whyte-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
-  width: calc((100% - 90px) / 4);
 }
 .team-card:not(:last-child) {
   margin-right: 30px;
 }
 /* Footer */
+.fut-address:not(:last-child) {
+  margin-bottom: 9px;
+}
 .address {
   font-style: normal;
 }
 .adress {
   color: var(--primary-whyte-color);
   display: inline-block;
-  margin-bottom: 9px;
 }
 .mail {
-  margin-bottom: 9px;
   display: inline-block;
 }
 
@@ -294,6 +281,32 @@ body {
   margin-bottom: 20px;
 }
 /* portfolio */
+.button.secondary {
+  background: #f5f4fa;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: 0;
+
+  padding: 6px 22px;
+}
+.btn:not(:last-child) {
+  margin-right: 8px;
+}
+.sec-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.button.secondary:hover,
+.button.secondary:focus {
+  color: var(--primary-whyte-color);
+  background-color: var(--accent-color);
+}
 
 .choice-title {
   color: var(--primary-text-color);
@@ -304,8 +317,6 @@ body {
   text-decoration: none;
   margin-top: 0;
   margin-bottom: 4px;
-  padding-top: 20px;
-  padding-left: 24px;
 }
 
 .choice-text {
@@ -314,8 +325,6 @@ body {
   line-height: 1.88;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 20px;
-  padding-left: 24px;
 
   text-decoration: none;
 }
@@ -323,30 +332,32 @@ body {
   text-decoration: none;
   color: var(--secondary-text-color);
 }
+.card-img {
+  display: block;
+  margin: 0;
+}
+.card-border {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 370px;
+}
 .choice {
   display: flex;
   flex-wrap: wrap;
+
+  margin-right: -30px;
+  margin-bottom: -30px;
 }
 .card-border.first {
   border: 0;
 }
 
-.card-border {
-  margin-bottom: 30px;
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-}
 .second-card {
   border: 1px solid #eeeeee;
-  margin-top: -4px;
-  box-sizing: border-box;
+  padding: 20px 24px;
+  width: 370px;
 }
-.card-border:nth-child(3n) {
-  margin-right: 0;
-}
-.card-border:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
